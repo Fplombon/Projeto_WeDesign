@@ -1,6 +1,11 @@
 
 // Menu Mobile
 
+document.querySelector('#hamburguer-icon').addEventListener('click', ()=> {document.querySelector('#sliding-header-menu-outer').style.right = "0" })
+
+document.querySelector('#sliding-header-menu-close-button').addEventListener('click', ()=> {document.querySelector('#sliding-header-menu-outer').style.right = "-320px" })
+
+
 
 
 
