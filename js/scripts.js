@@ -17,8 +17,31 @@ var aboutUs = {
   "Valores": "<ul><li>Comprometimento</li><li>Inovação</li><li>Ética profissional</li><li>Superação dos resultados</li><li>Melhoria contínua</li></ul>"
 };
 
-var unseletected_color = "#646872";
-var seletected_color = "#2A2D34";
+var unselected_color = "#646872";
+var selected_color = "#2A2D34";
+
+var about_tags = document.getElementsByClassName('single-tab');
+
+for(let i = 0; i< about_tags.length; i ++){
+  about_tags[i].onclick = function(){
+
+    for(let a = 0; a < about_tags.length; a++){
+      about_tags[a].style.backgroundColor = unselected_color;
+      about_tags[a].style.fontWeight = 'normal';
+    }
+
+    this.style.backgroundColor = selected_color;
+    this.style.fontWeight = 'bold';
+
+    let selecionado = this.innerHTML;
+
+    document.getElementById('box-text').innerHTML = aboutUs[selecionado];
+
+  }
+}
+
+
+
 
 
 
